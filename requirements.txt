@@ -1,0 +1,4 @@
+PySide6>=6.7
+psutil>=6.0
+plyer>=2.1
+WMI>=1.5.1; platform_system == "Windows"
