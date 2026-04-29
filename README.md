@@ -22,29 +22,29 @@ CPU Monitor Pro is a polished PySide6 desktop app for realtime system monitoring
 - plyer
 - WMI on Windows, when available
 
-## Getting Started
+## Installation and Usage
 
-Clone the repository:
+Clone this repository:
 
 ```powershell
 git clone https://github.com/shubhamj19191-dev/cpu-monitor-dashboard.git
 cd cpu-monitor-dashboard
 ```
 
-Create and activate a virtual environment:
+Create and activate a Python virtual environment:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\activate
 ```
 
-Install dependencies:
+Install the required dependencies:
 
 ```powershell
 pip install -r requirements.txt
 ```
 
-Run the app:
+Launch the desktop application:
 
 ```powershell
 python main.py
