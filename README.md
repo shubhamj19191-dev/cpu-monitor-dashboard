@@ -1,29 +1,89 @@
 # CPU Monitor Pro
 
-A premium PySide6 desktop dashboard for realtime CPU, memory, temperature, boot time, process, and per-core activity monitoring.
+CPU Monitor Pro is a polished PySide6 desktop app for realtime system monitoring. It shows CPU load, per-core activity, memory usage, estimated temperature, boot time, and a live trend graph inside a modern frameless desktop UI.
 
-## Features
+## Highlights
 
-- Modern frameless desktop window
-- Animated premium gradient background
-- Realtime CPU gauge and status card
-- Live CPU trend graph
+- Premium frameless desktop interface
+- Animated multicolor gradient background
+- Realtime CPU usage gauge
+- Live CPU health/status card
+- CPU trend graph with smooth updates
 - Per-core activity bars
-- Memory, temperature, frequency, and boot-time cards
-- Generated app icon at runtime
+- Frequency, memory, temperature, and boot-time metric cards
+- Runtime-generated app icon
+- Clean Python-only desktop stack
 
-## Run
+## Tech Stack
+
+- Python
+- PySide6
+- psutil
+- plyer
+- WMI on Windows, when available
+
+## Getting Started
+
+Clone the repository:
+
+```powershell
+git clone https://github.com/shubhamj19191-dev/cpu-monitor-dashboard.git
+cd cpu-monitor-dashboard
+```
+
+Create and activate a virtual environment:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\activate
+```
+
+Install dependencies:
 
 ```powershell
 pip install -r requirements.txt
+```
+
+Run the app:
+
+```powershell
 python main.py
 ```
 
-## Build A Windows App
+## Build For Windows
+
+Install PyInstaller:
 
 ```powershell
 pip install pyinstaller
+```
+
+Create a desktop executable:
+
+```powershell
 pyinstaller --noconfirm --windowed --name "CPU Monitor Pro" main.py
 ```
 
-The app will be created inside the `dist` folder.
+The built app will be available in the `dist` folder.
+
+## Project Structure
+
+```text
+cpu-monitor-dashboard/
+|-- main.py              # App entry point
+|-- ui.py                # PySide6 desktop UI
+|-- Cpu.py               # System monitoring logic
+|-- requirements.txt     # Python dependencies
+|-- README.md            # Project documentation
+`-- .gitignore
+```
+
+## Notes
+
+- CPU and memory readings come from `psutil`.
+- Temperature support depends on the system. If a direct sensor is not available, the app uses a CPU-load-based estimate.
+- The app is designed as a desktop application, not a web dashboard.
+
+## Author
+
+Made by [Shubham](https://github.com/shubhamj19191-dev).
