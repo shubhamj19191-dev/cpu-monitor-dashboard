@@ -1,8 +1,3 @@
-"""
-CPU Monitor - Main Entry Point
-A premium CPU monitoring application with real-time animations and live gradients.
-"""
-
 import sys
 from PySide6.QtWidgets import QApplication
 from ui import MainWindow
